@@ -1,5 +1,9 @@
+import httpx
+
+
 def main():
-    print('Hello You')
+    request = httpx.get('https://jsonplaceholder.typicode.com/users')
+    print(request.json())
 
 
 if __name__ == '__main__':
